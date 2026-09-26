@@ -14,6 +14,7 @@ import { Route as ClientesEResultadosRouteImport } from './routes/clientes-e-res
 import { Route as PoliticaDeCookiesRouteImport } from './routes/politica-de-cookies'
 import { Route as PoliticaDePrivacidadeRouteImport } from './routes/politica-de-privacidade'
 import { Route as QuemSomosRouteImport } from './routes/quem-somos'
+import { Route as SoliciteUmOrcamentoRouteImport } from './routes/solicite-um-orcamento'
 import { Route as BlogIndexRouteImport } from './routes/blog/index'
 import { Route as BlogSlugRouteImport } from './routes/blog/$slug'
 import { Route as RegioesIndexRouteImport } from './routes/regioes/index'
@@ -48,6 +49,11 @@ const PoliticaDePrivacidadeRoute = PoliticaDePrivacidadeRouteImport.update({
 const QuemSomosRoute = QuemSomosRouteImport.update({
   id: '/quem-somos',
   path: '/quem-somos',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const SoliciteUmOrcamentoRoute = SoliciteUmOrcamentoRouteImport.update({
+  id: '/solicite-um-orcamento',
+  path: '/solicite-um-orcamento',
   getParentRoute: () => rootRouteImport,
 } as any)
 const BlogIndexRoute = BlogIndexRouteImport.update({
@@ -107,6 +113,7 @@ export interface FileRoutesByFullPath {
   '/politica-de-cookies': typeof PoliticaDeCookiesRoute
   '/politica-de-privacidade': typeof PoliticaDePrivacidadeRoute
   '/quem-somos': typeof QuemSomosRoute
+  '/solicite-um-orcamento': typeof SoliciteUmOrcamentoRoute
   '/blog/$slug': typeof BlogSlugRoute
   '/regioes/$slug': typeof RegioesSlugRoute
   '/residencial/$slug': typeof ResidencialSlugRoute
@@ -124,6 +131,7 @@ export interface FileRoutesByTo {
   '/politica-de-cookies': typeof PoliticaDeCookiesRoute
   '/politica-de-privacidade': typeof PoliticaDePrivacidadeRoute
   '/quem-somos': typeof QuemSomosRoute
+  '/solicite-um-orcamento': typeof SoliciteUmOrcamentoRoute
   '/blog/$slug': typeof BlogSlugRoute
   '/regioes/$slug': typeof RegioesSlugRoute
   '/residencial/$slug': typeof ResidencialSlugRoute
@@ -142,6 +150,7 @@ export interface FileRoutesById {
   '/politica-de-cookies': typeof PoliticaDeCookiesRoute
   '/politica-de-privacidade': typeof PoliticaDePrivacidadeRoute
   '/quem-somos': typeof QuemSomosRoute
+  '/solicite-um-orcamento': typeof SoliciteUmOrcamentoRoute
   '/blog/$slug': typeof BlogSlugRoute
   '/regioes/$slug': typeof RegioesSlugRoute
   '/residencial/$slug': typeof ResidencialSlugRoute
@@ -161,6 +170,7 @@ export interface FileRouteTypes {
     | '/politica-de-cookies'
     | '/politica-de-privacidade'
     | '/quem-somos'
+    | '/solicite-um-orcamento'
     | '/blog/$slug'
     | '/regioes/$slug'
     | '/residencial/$slug'
@@ -178,6 +188,7 @@ export interface FileRouteTypes {
     | '/politica-de-cookies'
     | '/politica-de-privacidade'
     | '/quem-somos'
+    | '/solicite-um-orcamento'
     | '/blog/$slug'
     | '/regioes/$slug'
     | '/residencial/$slug'
@@ -195,6 +206,7 @@ export interface FileRouteTypes {
     | '/politica-de-cookies'
     | '/politica-de-privacidade'
     | '/quem-somos'
+    | '/solicite-um-orcamento'
     | '/blog/$slug'
     | '/regioes/$slug'
     | '/residencial/$slug'
@@ -213,6 +225,7 @@ export interface RootRouteChildren {
   PoliticaDeCookiesRoute: typeof PoliticaDeCookiesRoute
   PoliticaDePrivacidadeRoute: typeof PoliticaDePrivacidadeRoute
   QuemSomosRoute: typeof QuemSomosRoute
+  SoliciteUmOrcamentoRoute: typeof SoliciteUmOrcamentoRoute
   BlogSlugRoute: typeof BlogSlugRoute
   RegioesSlugRoute: typeof RegioesSlugRoute
   ResidencialSlugRoute: typeof ResidencialSlugRoute
@@ -260,6 +273,13 @@ declare module '@tanstack/react-router' {
       path: '/quem-somos'
       fullPath: '/quem-somos'
       preLoaderRoute: typeof QuemSomosRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/solicite-um-orcamento': {
+      id: '/solicite-um-orcamento'
+      path: '/solicite-um-orcamento'
+      fullPath: '/solicite-um-orcamento'
+      preLoaderRoute: typeof SoliciteUmOrcamentoRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/blog/': {
@@ -341,6 +361,7 @@ const rootRouteChildren: RootRouteChildren = {
   PoliticaDeCookiesRoute: PoliticaDeCookiesRoute,
   PoliticaDePrivacidadeRoute: PoliticaDePrivacidadeRoute,
   QuemSomosRoute: QuemSomosRoute,
+  SoliciteUmOrcamentoRoute: SoliciteUmOrcamentoRoute,
   BlogSlugRoute: BlogSlugRoute,
   RegioesSlugRoute: RegioesSlugRoute,
   ResidencialSlugRoute: ResidencialSlugRoute,
