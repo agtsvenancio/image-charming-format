@@ -10,33 +10,219 @@
 
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as IndexRouteImport } from './routes/index'
+import { Route as ClientesEResultadosRouteImport } from './routes/clientes-e-resultados'
+import { Route as PoliticaDeCookiesRouteImport } from './routes/politica-de-cookies'
+import { Route as PoliticaDePrivacidadeRouteImport } from './routes/politica-de-privacidade'
+import { Route as QuemSomosRouteImport } from './routes/quem-somos'
+import { Route as BlogIndexRouteImport } from './routes/blog/index'
+import { Route as BlogSlugRouteImport } from './routes/blog/$slug'
+import { Route as RegioesIndexRouteImport } from './routes/regioes/index'
+import { Route as RegioesSlugRouteImport } from './routes/regioes/$slug'
+import { Route as ResidencialIndexRouteImport } from './routes/residencial/index'
+import { Route as ResidencialSlugRouteImport } from './routes/residencial/$slug'
+import { Route as SegmentosIndexRouteImport } from './routes/segmentos/index'
+import { Route as SegmentosSlugRouteImport } from './routes/segmentos/$slug'
+import { Route as SolucoesIndexRouteImport } from './routes/solucoes/index'
+import { Route as SolucoesSlugRouteImport } from './routes/solucoes/$slug'
 
 const IndexRoute = IndexRouteImport.update({
   id: '/',
   path: '/',
   getParentRoute: () => rootRouteImport,
 } as any)
+const ClientesEResultadosRoute = ClientesEResultadosRouteImport.update({
+  id: '/clientes-e-resultados',
+  path: '/clientes-e-resultados',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const PoliticaDeCookiesRoute = PoliticaDeCookiesRouteImport.update({
+  id: '/politica-de-cookies',
+  path: '/politica-de-cookies',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const PoliticaDePrivacidadeRoute = PoliticaDePrivacidadeRouteImport.update({
+  id: '/politica-de-privacidade',
+  path: '/politica-de-privacidade',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const QuemSomosRoute = QuemSomosRouteImport.update({
+  id: '/quem-somos',
+  path: '/quem-somos',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const BlogIndexRoute = BlogIndexRouteImport.update({
+  id: '/blog/',
+  path: '/blog/',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const BlogSlugRoute = BlogSlugRouteImport.update({
+  id: '/blog/$slug',
+  path: '/blog/$slug',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const RegioesIndexRoute = RegioesIndexRouteImport.update({
+  id: '/regioes/',
+  path: '/regioes/',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const RegioesSlugRoute = RegioesSlugRouteImport.update({
+  id: '/regioes/$slug',
+  path: '/regioes/$slug',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ResidencialIndexRoute = ResidencialIndexRouteImport.update({
+  id: '/residencial/',
+  path: '/residencial/',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ResidencialSlugRoute = ResidencialSlugRouteImport.update({
+  id: '/residencial/$slug',
+  path: '/residencial/$slug',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const SegmentosIndexRoute = SegmentosIndexRouteImport.update({
+  id: '/segmentos/',
+  path: '/segmentos/',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const SegmentosSlugRoute = SegmentosSlugRouteImport.update({
+  id: '/segmentos/$slug',
+  path: '/segmentos/$slug',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const SolucoesIndexRoute = SolucoesIndexRouteImport.update({
+  id: '/solucoes/',
+  path: '/solucoes/',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const SolucoesSlugRoute = SolucoesSlugRouteImport.update({
+  id: '/solucoes/$slug',
+  path: '/solucoes/$slug',
+  getParentRoute: () => rootRouteImport,
+} as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
+  '/clientes-e-resultados': typeof ClientesEResultadosRoute
+  '/politica-de-cookies': typeof PoliticaDeCookiesRoute
+  '/politica-de-privacidade': typeof PoliticaDePrivacidadeRoute
+  '/quem-somos': typeof QuemSomosRoute
+  '/blog/$slug': typeof BlogSlugRoute
+  '/regioes/$slug': typeof RegioesSlugRoute
+  '/residencial/$slug': typeof ResidencialSlugRoute
+  '/segmentos/$slug': typeof SegmentosSlugRoute
+  '/solucoes/$slug': typeof SolucoesSlugRoute
+  '/blog/': typeof BlogIndexRoute
+  '/regioes/': typeof RegioesIndexRoute
+  '/residencial/': typeof ResidencialIndexRoute
+  '/segmentos/': typeof SegmentosIndexRoute
+  '/solucoes/': typeof SolucoesIndexRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
+  '/clientes-e-resultados': typeof ClientesEResultadosRoute
+  '/politica-de-cookies': typeof PoliticaDeCookiesRoute
+  '/politica-de-privacidade': typeof PoliticaDePrivacidadeRoute
+  '/quem-somos': typeof QuemSomosRoute
+  '/blog/$slug': typeof BlogSlugRoute
+  '/regioes/$slug': typeof RegioesSlugRoute
+  '/residencial/$slug': typeof ResidencialSlugRoute
+  '/segmentos/$slug': typeof SegmentosSlugRoute
+  '/solucoes/$slug': typeof SolucoesSlugRoute
+  '/blog': typeof BlogIndexRoute
+  '/regioes': typeof RegioesIndexRoute
+  '/residencial': typeof ResidencialIndexRoute
+  '/segmentos': typeof SegmentosIndexRoute
+  '/solucoes': typeof SolucoesIndexRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
+  '/clientes-e-resultados': typeof ClientesEResultadosRoute
+  '/politica-de-cookies': typeof PoliticaDeCookiesRoute
+  '/politica-de-privacidade': typeof PoliticaDePrivacidadeRoute
+  '/quem-somos': typeof QuemSomosRoute
+  '/blog/$slug': typeof BlogSlugRoute
+  '/regioes/$slug': typeof RegioesSlugRoute
+  '/residencial/$slug': typeof ResidencialSlugRoute
+  '/segmentos/$slug': typeof SegmentosSlugRoute
+  '/solucoes/$slug': typeof SolucoesSlugRoute
+  '/blog/': typeof BlogIndexRoute
+  '/regioes/': typeof RegioesIndexRoute
+  '/residencial/': typeof ResidencialIndexRoute
+  '/segmentos/': typeof SegmentosIndexRoute
+  '/solucoes/': typeof SolucoesIndexRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/'
+  fullPaths:
+    | '/'
+    | '/clientes-e-resultados'
+    | '/politica-de-cookies'
+    | '/politica-de-privacidade'
+    | '/quem-somos'
+    | '/blog/$slug'
+    | '/regioes/$slug'
+    | '/residencial/$slug'
+    | '/segmentos/$slug'
+    | '/solucoes/$slug'
+    | '/blog/'
+    | '/regioes/'
+    | '/residencial/'
+    | '/segmentos/'
+    | '/solucoes/'
   fileRoutesByTo: FileRoutesByTo
-  to: '/'
-  id: '__root__' | '/'
+  to:
+    | '/'
+    | '/clientes-e-resultados'
+    | '/politica-de-cookies'
+    | '/politica-de-privacidade'
+    | '/quem-somos'
+    | '/blog/$slug'
+    | '/regioes/$slug'
+    | '/residencial/$slug'
+    | '/segmentos/$slug'
+    | '/solucoes/$slug'
+    | '/blog'
+    | '/regioes'
+    | '/residencial'
+    | '/segmentos'
+    | '/solucoes'
+  id:
+    | '__root__'
+    | '/'
+    | '/clientes-e-resultados'
+    | '/politica-de-cookies'
+    | '/politica-de-privacidade'
+    | '/quem-somos'
+    | '/blog/$slug'
+    | '/regioes/$slug'
+    | '/residencial/$slug'
+    | '/segmentos/$slug'
+    | '/solucoes/$slug'
+    | '/blog/'
+    | '/regioes/'
+    | '/residencial/'
+    | '/segmentos/'
+    | '/solucoes/'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
+  ClientesEResultadosRoute: typeof ClientesEResultadosRoute
+  PoliticaDeCookiesRoute: typeof PoliticaDeCookiesRoute
+  PoliticaDePrivacidadeRoute: typeof PoliticaDePrivacidadeRoute
+  QuemSomosRoute: typeof QuemSomosRoute
+  BlogSlugRoute: typeof BlogSlugRoute
+  RegioesSlugRoute: typeof RegioesSlugRoute
+  ResidencialSlugRoute: typeof ResidencialSlugRoute
+  SegmentosSlugRoute: typeof SegmentosSlugRoute
+  SolucoesSlugRoute: typeof SolucoesSlugRoute
+  BlogIndexRoute: typeof BlogIndexRoute
+  RegioesIndexRoute: typeof RegioesIndexRoute
+  ResidencialIndexRoute: typeof ResidencialIndexRoute
+  SegmentosIndexRoute: typeof SegmentosIndexRoute
+  SolucoesIndexRoute: typeof SolucoesIndexRoute
 }
 
 declare module '@tanstack/react-router' {
@@ -48,11 +234,123 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof IndexRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/clientes-e-resultados': {
+      id: '/clientes-e-resultados'
+      path: '/clientes-e-resultados'
+      fullPath: '/clientes-e-resultados'
+      preLoaderRoute: typeof ClientesEResultadosRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/politica-de-cookies': {
+      id: '/politica-de-cookies'
+      path: '/politica-de-cookies'
+      fullPath: '/politica-de-cookies'
+      preLoaderRoute: typeof PoliticaDeCookiesRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/politica-de-privacidade': {
+      id: '/politica-de-privacidade'
+      path: '/politica-de-privacidade'
+      fullPath: '/politica-de-privacidade'
+      preLoaderRoute: typeof PoliticaDePrivacidadeRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/quem-somos': {
+      id: '/quem-somos'
+      path: '/quem-somos'
+      fullPath: '/quem-somos'
+      preLoaderRoute: typeof QuemSomosRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/blog/': {
+      id: '/blog/'
+      path: '/blog'
+      fullPath: '/blog/'
+      preLoaderRoute: typeof BlogIndexRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/blog/$slug': {
+      id: '/blog/$slug'
+      path: '/blog/$slug'
+      fullPath: '/blog/$slug'
+      preLoaderRoute: typeof BlogSlugRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/regioes/': {
+      id: '/regioes/'
+      path: '/regioes'
+      fullPath: '/regioes/'
+      preLoaderRoute: typeof RegioesIndexRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/regioes/$slug': {
+      id: '/regioes/$slug'
+      path: '/regioes/$slug'
+      fullPath: '/regioes/$slug'
+      preLoaderRoute: typeof RegioesSlugRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/residencial/': {
+      id: '/residencial/'
+      path: '/residencial'
+      fullPath: '/residencial/'
+      preLoaderRoute: typeof ResidencialIndexRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/residencial/$slug': {
+      id: '/residencial/$slug'
+      path: '/residencial/$slug'
+      fullPath: '/residencial/$slug'
+      preLoaderRoute: typeof ResidencialSlugRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/segmentos/': {
+      id: '/segmentos/'
+      path: '/segmentos'
+      fullPath: '/segmentos/'
+      preLoaderRoute: typeof SegmentosIndexRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/segmentos/$slug': {
+      id: '/segmentos/$slug'
+      path: '/segmentos/$slug'
+      fullPath: '/segmentos/$slug'
+      preLoaderRoute: typeof SegmentosSlugRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/solucoes/': {
+      id: '/solucoes/'
+      path: '/solucoes'
+      fullPath: '/solucoes/'
+      preLoaderRoute: typeof SolucoesIndexRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/solucoes/$slug': {
+      id: '/solucoes/$slug'
+      path: '/solucoes/$slug'
+      fullPath: '/solucoes/$slug'
+      preLoaderRoute: typeof SolucoesSlugRouteImport
+      parentRoute: typeof rootRouteImport
+    }
   }
 }
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
+  ClientesEResultadosRoute: ClientesEResultadosRoute,
+  PoliticaDeCookiesRoute: PoliticaDeCookiesRoute,
+  PoliticaDePrivacidadeRoute: PoliticaDePrivacidadeRoute,
+  QuemSomosRoute: QuemSomosRoute,
+  BlogSlugRoute: BlogSlugRoute,
+  RegioesSlugRoute: RegioesSlugRoute,
+  ResidencialSlugRoute: ResidencialSlugRoute,
+  SegmentosSlugRoute: SegmentosSlugRoute,
+  SolucoesSlugRoute: SolucoesSlugRoute,
+  BlogIndexRoute: BlogIndexRoute,
+  RegioesIndexRoute: RegioesIndexRoute,
+  ResidencialIndexRoute: ResidencialIndexRoute,
+  SegmentosIndexRoute: SegmentosIndexRoute,
+  SolucoesIndexRoute: SolucoesIndexRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
