@@ -17,10 +17,10 @@ const simpleLinks = [
 function Mega({ label, base, items }: { label: string; base: "solucoes" | "segmentos"; items: typeof solucoes }) {
   return (
     <div className="group relative">
-      <Link to={base === "solucoes" ? "/solucoes" : "/segmentos"} className="flex items-center gap-1 py-6 text-sm font-medium text-graphite hover:text-navy">
+      <Link to={base === "solucoes" ? "/solucoes" : "/segmentos"} className="flex items-center gap-1 whitespace-nowrap py-6 text-sm font-medium text-graphite hover:text-navy">
         {label} <ChevronDown className="h-4 w-4 transition group-hover:rotate-180" />
       </Link>
-      <div className="invisible absolute left-1/2 top-full z-50 w-[36rem] -translate-x-1/2 rounded-2xl border bg-popover p-4 opacity-0 shadow-lift transition group-hover:visible group-hover:opacity-100">
+      <div className="invisible absolute left-0 top-full z-50 w-[34rem] max-w-[90vw] rounded-2xl border bg-popover p-4 opacity-0 shadow-lift transition group-hover:visible group-hover:opacity-100">
         <div className="grid grid-cols-2 gap-1">
           {items.map((i, idx) => (
             <a key={i.slug} href={`/${base}/${i.slug}`} className={cn("rounded-lg px-3 py-2.5 text-sm hover:bg-accent", idx === 0 && base === "solucoes" && "col-span-2 bg-accent/60")}>
@@ -49,21 +49,24 @@ function Header({ page }: { page: string }) {
     <header className={cn("sticky top-0 z-40 bg-background transition-shadow", scrolled && "shadow-soft")}>
       <div className="container-site flex items-center justify-between gap-4">
         <div className="py-3"><Logo /></div>
-        <nav className="hidden items-center gap-5 2xl:flex" aria-label="Principal" style={{ whiteSpace: "nowrap" }}>
-          <Link to="/" className="text-sm font-medium text-graphite hover:text-navy">Início</Link>
-          <Mega label="Soluções para empresas" base="solucoes" items={solucoes} />
-          <Mega label="Segmentos atendidos" base="segmentos" items={segmentos} />
+        <nav className="hidden items-center gap-3 lg:flex xl:gap-5" aria-label="Principal">
+          <Link to="/" className="whitespace-nowrap text-sm font-medium text-graphite hover:text-navy">Início</Link>
+          <Mega label="Soluções" base="solucoes" items={solucoes} />
+          <Mega label="Segmentos" base="segmentos" items={segmentos} />
           {simpleLinks.map((l) => (
-            <Link key={l.to} to={l.to} className="text-sm font-medium text-graphite hover:text-navy">{l.label}</Link>
+            <Link key={l.to} to={l.to} className="whitespace-nowrap text-sm font-medium text-graphite hover:text-navy">{l.label}</Link>
           ))}
         </nav>
         <div className="flex items-center gap-2">
-          <Link to="/solicite-um-orcamento" className={btn("primary", "hidden sm:inline-flex px-5 py-3 whitespace-nowrap")}>Solicite um orçamento</Link>
-          <button className="rounded-lg p-2 2xl:hidden" aria-label="Abrir menu" onClick={() => setOpen(true)}><Menu className="h-6 w-6 text-navy" /></button>
+          <Link to="/solicite-um-orcamento" className={btn("primary", "hidden sm:inline-flex px-5 py-3 whitespace-nowrap")}>
+            <span className="hidden 2xl:inline">Solicite um orçamento</span>
+            <span className="2xl:hidden">Orçamento</span>
+          </Link>
+          <button className="rounded-lg p-2 lg:hidden" aria-label="Abrir menu" onClick={() => setOpen(true)}><Menu className="h-6 w-6 text-navy" /></button>
         </div>
       </div>
       {open && (
-        <div className="fixed inset-0 z-50 overflow-y-auto bg-background 2xl:hidden">
+        <div className="fixed inset-0 z-50 overflow-y-auto bg-background lg:hidden">
           <div className="container-site flex items-center justify-between py-3">
             <Logo />
             <button aria-label="Fechar menu" onClick={() => setOpen(false)} className="p-2"><X className="h-6 w-6 text-navy" /></button>
