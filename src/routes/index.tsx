@@ -87,8 +87,8 @@ function Trust() {
 }
 
 function Solucoes() {
-  const [destaque] = solucoes;
-  const grid = [1, 2, 5, 7, 8].map((i) => solucoes[i]);
+  const destaque = solucoes[0]!;
+  const grid = [1, 2, 5, 7, 8].map((i) => solucoes[i]!);
   return (
     <section className="bg-surface py-20 md:py-28">
       <div className="container-site">
@@ -126,7 +126,7 @@ function Segmentos() {
         <SectionHeader eyebrow="Segmentos atendidos" title="Atendemos empresas de diferentes setores" align="center" />
         <div className="mt-12 grid grid-cols-2 gap-4 md:grid-cols-4">
           {segmentos.slice(0, 8).map((s, i) => {
-            const Icon = icons[i];
+            const Icon = icons[i]!;
             return (
               <a key={s.slug} href={`/segmentos/${s.slug}`} className="group rounded-2xl border bg-card p-6 text-center transition hover:border-navy hover:shadow-soft">
                 <Icon className="mx-auto h-8 w-8 text-navy transition group-hover:scale-110" />

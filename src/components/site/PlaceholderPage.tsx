@@ -3,7 +3,7 @@ import type { ReactNode } from "react";
 import { Breadcrumbs, btn } from "./ui";
 import { whatsappLink } from "@/data/site";
 
-export function PageHero({ eyebrow, title, intro, crumbs }: { eyebrow: string; title: string; intro?: string; crumbs: { label: string; to?: string }[] }) {
+export function PageHero({ eyebrow, title, intro, crumbs }: { eyebrow: string; title: string; intro?: string | undefined; crumbs: { label: string; to?: string }[] }) {
   return (
     <section className="bg-navy text-navy-foreground">
       <div className="container-site py-14 md:py-20">
@@ -16,7 +16,7 @@ export function PageHero({ eyebrow, title, intro, crumbs }: { eyebrow: string; t
   );
 }
 
-export function PlaceholderPage({ eyebrow, title, intro, crumbs, children }: { eyebrow: string; title: string; intro?: string; crumbs: { label: string; to?: string }[]; children?: ReactNode }) {
+export function PlaceholderPage({ eyebrow, title, intro, crumbs, children }: { eyebrow: string; title: string; intro?: string | undefined; crumbs: { label: string; to?: string }[]; children?: ReactNode }) {
   return (
     <>
       <PageHero eyebrow={eyebrow} title={title} intro={intro} crumbs={crumbs} />

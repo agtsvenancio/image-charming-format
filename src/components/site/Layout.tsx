@@ -49,7 +49,7 @@ function Header({ page }: { page: string }) {
     <header className={cn("sticky top-0 z-40 bg-background transition-shadow", scrolled && "shadow-soft")}>
       <div className="container-site flex items-center justify-between gap-4">
         <div className="py-3"><Logo /></div>
-        <nav className="hidden items-center gap-5 xl:flex" aria-label="Principal">
+        <nav className="hidden items-center gap-5 2xl:flex" aria-label="Principal" style={{ whiteSpace: "nowrap" }}>
           <Link to="/" className="text-sm font-medium text-graphite hover:text-navy">Início</Link>
           <Mega label="Soluções para empresas" base="solucoes" items={solucoes} />
           <Mega label="Segmentos atendidos" base="segmentos" items={segmentos} />
@@ -58,12 +58,12 @@ function Header({ page }: { page: string }) {
           ))}
         </nav>
         <div className="flex items-center gap-2">
-          <Link to="/solicite-um-orcamento" className={btn("primary", "hidden sm:inline-flex px-5 py-3")}>Solicite um orçamento</Link>
-          <button className="rounded-lg p-2 xl:hidden" aria-label="Abrir menu" onClick={() => setOpen(true)}><Menu className="h-6 w-6 text-navy" /></button>
+          <Link to="/solicite-um-orcamento" className={btn("primary", "hidden sm:inline-flex px-5 py-3 whitespace-nowrap")}>Solicite um orçamento</Link>
+          <button className="rounded-lg p-2 2xl:hidden" aria-label="Abrir menu" onClick={() => setOpen(true)}><Menu className="h-6 w-6 text-navy" /></button>
         </div>
       </div>
       {open && (
-        <div className="fixed inset-0 z-50 overflow-y-auto bg-background xl:hidden">
+        <div className="fixed inset-0 z-50 overflow-y-auto bg-background 2xl:hidden">
           <div className="container-site flex items-center justify-between py-3">
             <Logo />
             <button aria-label="Fechar menu" onClick={() => setOpen(false)} className="p-2"><X className="h-6 w-6 text-navy" /></button>
