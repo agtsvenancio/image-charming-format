@@ -12,7 +12,7 @@ function maskPhone(v: string) {
   return `(${d.slice(0, 2)}) ${d.slice(2, 7)}-${d.slice(7)}`;
 }
 
-export function LeadForm({ compact = false, origem = "site" }: { compact?: boolean; origem?: string }) {
+export function LeadForm({ compact = false, origem = "site", solucao = "", segmento = "" }: { compact?: boolean; origem?: string; solucao?: string; segmento?: string }) {
   const [phone, setPhone] = useState("");
   const [sent, setSent] = useState(false);
 
@@ -42,15 +42,15 @@ export function LeadForm({ compact = false, origem = "site" }: { compact?: boole
       {!compact && <input required type="email" name="email" placeholder="E-mail*" aria-label="E-mail" className={field} />}
       {!compact && <input required name="cidade" placeholder="Cidade / bairro*" aria-label="Cidade ou bairro" className={field} />}
       {!compact && (
-        <select name="segmento" aria-label="Segmento" className={field} defaultValue="">
+        <select name="segmento" aria-label="Segmento" className={field} defaultValue={segmento}>
           <option value="" disabled>Segmento</option>
-          {segmentos.map((s) => <option key={s.slug}>{s.title}</option>)}
+          {segmentos.map((s) => <option key={s.slug} value={s.title}>{s.title}</option>)}
           <option>Outro</option>
         </select>
       )}
-      <select name="solucao" aria-label="Solução de interesse" className={`${field} ${compact ? "" : "sm:col-span-2"}`} defaultValue="">
+      <select name="solucao" aria-label="Solução de interesse" className={`${field} ${compact ? "" : "sm:col-span-2"}`} defaultValue={solucao}>
         <option value="" disabled>Solução de interesse</option>
-        {solucoes.map((s) => <option key={s.slug}>{s.title}</option>)}
+        {solucoes.map((s) => <option key={s.slug} value={s.title}>{s.title}</option>)}
         <option>Residencial</option>
       </select>
       {!compact && <textarea name="mensagem" rows={3} placeholder="Mensagem" aria-label="Mensagem" className={`${field} sm:col-span-2`} />}
