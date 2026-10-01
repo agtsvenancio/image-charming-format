@@ -41,7 +41,7 @@ export function MetodoMini() {
   );
 }
 
-export function ProvaBlock({ imagem, legenda, antesDepois }: { imagem?: string; legenda?: string; antesDepois?: boolean }) {
+export function ProvaBlock({ imagem, legenda, antesDepois }: { imagem?: string | undefined; legenda?: string | undefined; antesDepois?: boolean | undefined }) {
   return (
     <section className="bg-muted/50 py-16">
       <div className="container-site grid items-center gap-10 lg:grid-cols-2">

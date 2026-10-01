@@ -9,7 +9,8 @@ export const Route = createFileRoute("/solucoes/")({
 });
 
 function Page() {
-  const [destaque, ...resto] = solucoesDetalhadas;
+  const destaque = solucoesDetalhadas[0]!;
+  const resto = solucoesDetalhadas.slice(1);
   return (
     <>
       <PageHero eyebrow="SOLUÇÕES PARA EMPRESAS" title="Soluções para empresas" intro="Higienização técnica de carpetes, estofados e mobiliário corporativo, com planejamento que respeita a sua operação." crumbs={[{ label: "Soluções para empresas" }]} />
