@@ -13,7 +13,7 @@ export const solucoes: Item[] = [
   { slug: "higienizacao-de-cadeiras-e-poltronas", title: "Higienização de cadeiras e poltronas", short: "Cadeiras de escritório, auditórios e salas de reunião higienizadas no local." },
   { slug: "higienizacao-de-sofas-de-recepcao", title: "Higienização de sofás de recepção", short: "A primeira impressão do seu espaço, bem cuidada." },
   { slug: "higienizacao-de-tapetes", title: "Higienização de tapetes", short: "Tapetes corporativos tratados conforme fibra e nível de sujidade." },
-  { slug: "higienizacao-de-persianas-e-cortinas", title: "Higienização de persianas e cortinas", short: "Remoção de poeira e resíduos sem desmontar a rotina do escritório." },
+  { slug: "higienizacao-de-persianas", title: "Higienização de persianas", short: "Remoção de poeira e resíduos sem desmontar a rotina do escritório." },
   { slug: "limpeza-e-hidratacao-de-couro", title: "Limpeza e hidratação de couro", short: "Conservação de poltronas e sofás de couro em ambientes executivos." },
   { slug: "impermeabilizacao-de-estofados-e-carpetes", title: "Impermeabilização de estofados e carpetes", short: "Proteção extra contra líquidos e manchas do dia a dia." },
   { slug: "planos-de-manutencao-e-contratos", title: "Planos de manutenção e contratos", short: "Manutenção programada e previsível para a sua operação." },
