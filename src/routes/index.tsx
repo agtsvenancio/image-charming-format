@@ -4,7 +4,7 @@ import {
   BadgeCheck, MapPin, Building2, Stethoscope, Hotel, GraduationCap, Store, Users, Factory, Landmark,
   FlaskConical, Thermometer, Clock, Cog, Wrench, ShieldCheck, CalendarClock, Handshake, FileCheck2, Truck, Star, ArrowRight,
 } from "lucide-react";
-import fotoExtratora from "@/assets/foto-extratora.jpg";
+import heroHigienizacaoSofa from "@/assets/hero-higienizacao-sofa-final.jpg";
 import fotoEnceradeira from "@/assets/foto-enceradeira.jpg";
 import fotoCarpete from "@/assets/foto-carpete.jpg";
 import selo from "@/assets/selo-metodo.png";
@@ -45,7 +45,7 @@ function Home() {
 function Hero() {
   return (
     <section className="relative isolate overflow-hidden bg-navy-deep">
-      <img src={fotoExtratora} alt="Profissional da Neide Maria higienizando carpete de escritório corporativo com extratora" width={1400} height={1867} className="absolute inset-0 -z-10 h-full w-full object-cover object-[38%_50%] md:object-[34%_52%]" fetchPriority="high" />
+      <img src={heroHigienizacaoSofa} alt="Profissional higienizando sofá corporativo com extratora" width={1920} height={1080} className="absolute inset-0 -z-10 h-full w-full object-cover object-[42%_50%] md:object-center" fetchPriority="high" />
       <div className="absolute inset-0 -z-10 bg-gradient-to-b from-navy-deep/35 via-navy-deep/20 to-navy-deep/80 md:bg-gradient-to-l md:from-navy-deep md:via-navy-deep/85 md:to-navy-deep/5" />
       <div className="container-site py-24 md:py-32 lg:py-40">
         <div className="max-w-2xl text-navy-foreground md:ml-auto md:w-[52%]">
