@@ -15,7 +15,7 @@ import { LeadForm } from "@/components/site/LeadForm";
 import { meta } from "@/components/site/PlaceholderPage";
 
 export const Route = createFileRoute("/")({
-  head: () => meta("Higienização profissional para empresas", "Higienização de carpetes corporativos, estofados, cadeiras e cortinas para empresas em São Paulo, ABC e Alphaville. Solicite um orçamento."),
+  head: () => meta("Higienização profissional para empresas", "Higienização de carpetes corporativos, estofados, cadeiras e persianas para empresas em São Paulo, ABC e Alphaville. Solicite um orçamento."),
   component: Home,
 });
 
@@ -45,13 +45,13 @@ function Home() {
 function Hero() {
   return (
     <section className="relative isolate overflow-hidden bg-navy-deep">
-      <img src={fotoExtratora} alt="Profissional da Neide Maria higienizando carpete de escritório corporativo com extratora" width={1400} height={1867} className="absolute inset-0 -z-10 h-full w-full object-cover object-[70%_40%]" fetchPriority="high" />
-      <div className="absolute inset-0 -z-10 bg-gradient-to-r from-navy-deep via-navy-deep/85 to-navy-deep/30" />
+      <img src={fotoExtratora} alt="Profissional da Neide Maria higienizando carpete de escritório corporativo com extratora" width={1400} height={1867} className="absolute inset-0 -z-10 h-full w-full object-cover object-[38%_50%] md:object-[34%_52%]" fetchPriority="high" />
+      <div className="absolute inset-0 -z-10 bg-gradient-to-b from-navy-deep/35 via-navy-deep/20 to-navy-deep/80 md:bg-gradient-to-l md:from-navy-deep md:via-navy-deep/85 md:to-navy-deep/5" />
       <div className="container-site py-24 md:py-32 lg:py-40">
-        <div className="max-w-2xl text-navy-foreground">
+        <div className="max-w-2xl text-navy-foreground md:ml-auto md:w-[52%]">
           <p className="eyebrow text-cta">Higienização profissional B2B</p>
           <h1 className="mt-4 text-4xl font-extrabold leading-[1.05] tracking-tight md:text-6xl">Higienização profissional para ambientes corporativos</h1>
-          <p className="mt-6 text-lg text-navy-foreground/85 md:text-xl">Soluções para carpetes, estofados, cadeiras, cortinas e outros itens que fazem parte da rotina da sua empresa, com atendimento em São Paulo, ABC e Alphaville.</p>
+          <p className="mt-6 text-lg text-navy-foreground/85 md:text-xl">Soluções para carpetes, estofados, cadeiras, persianas e outros itens que fazem parte da rotina da sua empresa, com atendimento em São Paulo, ABC e Alphaville.</p>
           <div className="mt-8 flex flex-wrap gap-3">
             <Link to="/solicite-um-orcamento" className={btn("primary")}>Solicite um orçamento</Link>
             <a href={whatsappLink("Home — hero")} target="_blank" rel="noreferrer" className={btn("ghostLight")}>Fale com a equipe</a>

@@ -4,7 +4,7 @@ import { solucoesDetalhadas } from "@/data/solucoes";
 import { btn } from "@/components/site/ui";
 
 export const Route = createFileRoute("/solucoes/")({
-  head: () => meta("Soluções para empresas", "Higienização profissional de carpetes, estofados, cadeiras, cortinas e mais para ambientes corporativos."),
+  head: () => meta("Soluções para empresas", "Higienização profissional de carpetes, estofados, cadeiras, persianas e mais para ambientes corporativos."),
   component: Page,
 });
 
